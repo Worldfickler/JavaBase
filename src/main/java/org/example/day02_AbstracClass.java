@@ -1,7 +1,5 @@
 package org.example;
 
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
@@ -14,13 +12,10 @@ public class day02_AbstracClass {
 
     public static void main(String[] args) {
 
-        Manager manager = new Manager("1", 2, 3);
-        manager.setBonus(4);
-        manager.work();
-
-//        ArrayList<? extends BaseAbstract<?>> baseAbstracts = new ArrayList<>();
         StringBaseAbstract stringBaseAbstract = new StringBaseAbstract();
         BaseAbstract<?> instance = BaseAbstract.getInstance(stringBaseAbstract.getKey());
+        System.out.println("stringBaseAbstract:" + stringBaseAbstract);
+        System.out.println("instance:" + instance);
         System.out.println(instance.getContent());
 
     }
@@ -32,8 +27,7 @@ abstract class BaseAbstract<T> {
     public static HashMap<String, BaseAbstract<?>> hashMap = new HashMap<>();
     T t;
 
-    public BaseAbstract(T t) {
-        this.t = t;
+    public BaseAbstract() {
         hashMap.put(getKey(), this);
     }
 
@@ -51,13 +45,13 @@ class StringBaseAbstract<T> extends BaseAbstract<T> {
 
     private T t;
 
-    public StringBaseAbstract(T t) {
-        super(t);
+    public StringBaseAbstract() {
+        super();
     }
 
     @Override
     public String getKey() {
-        return null;
+        return "StringBaseAbstract";
     }
 
     @Override
