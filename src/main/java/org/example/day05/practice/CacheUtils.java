@@ -10,13 +10,13 @@ import java.util.Map;
  * @date 2024/4/19 14:48
  */
 public class CacheUtils<T> {
-    private static final Map<String, Object> cache = new HashMap<>();
+    private static final Map<String, Object> CACHE = new HashMap<>();
     public void put(String key, Object value) {
-        cache.put(key, value);
+        CACHE.put(key, value);
     }
 
     public T get(String key, Class<T> clazz) {
-        Object value = cache.get(key);
+        Object value = CACHE.get(key);
         T cast = null;
         if (value == null) {
             System.out.println("没有找到 key 对应的值");
