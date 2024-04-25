@@ -7,7 +7,8 @@ package org.example.day08.test;
 public class Suger extends CoffeAdd {
     private Coffe coffe;
 
-    public Suger(Coffe coffe) {
+    public Suger(Coffe coffe) throws Exception {
+        super();
         this.coffe = coffe;
     }
 

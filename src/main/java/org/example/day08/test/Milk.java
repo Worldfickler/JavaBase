@@ -14,19 +14,17 @@ public class Milk extends Coffe {
         this.coffe = coffe;
     }
 
-    static  {
+    static {
         try {
             new Milk(null);
         } catch (Exception e) {
-
-
         }
     }
 
 
     @Override
     public double getPrice() {
-        return  coffe.getPrice() + 2;
+        return coffe.getPrice() + 2;
     }
 
     @Override
