@@ -1,11 +1,1 @@
-比较时间 = Thu Apr 25 15:37:59 CST 2024
-Student{name='AAAA', age=10, dealMessage='Age 处理完成'}
-JSON 格式
-比较时间 = Thu Apr 25 15:45:56 CST 2024
-{"name":"AAAA","age":10,"dealMessage":"Age 处理完成"}
-默认格式
-比较时间 = Thu Apr 25 17:29:10 CST 2024
-Student{name='AAAA', age=10, dealMessage=''}
-默认格式
-比较时间 = Thu Apr 25 17:29:54 CST 2024
 Student{name='AAAA', age=10, dealMessage=''}

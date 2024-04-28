@@ -6,12 +6,12 @@ import com.google.gson.Gson;
  * @author Fickler
  * @date 2024/4/25 13:27
  */
-public class JsonPrintControl implements Control{
+public class JsonPrintControl<T> implements Control<T>{
     Gson gson = new Gson();
+
     @Override
-    public void printControl(Student student, String type) {
-        System.out.println("JSON 格式的控制台输出");
-        String s = gson.toJson(student);
-        System.out.println(s);
+    public void printControl(T t, String type) throws NoSuchFieldException, IllegalAccessException {
+        String s = gson.toJson(t);
+        System.out.println("JSON 格式 = " + s);
     }
 }

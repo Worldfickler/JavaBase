@@ -4,7 +4,7 @@ package org.example.day09.practice;
  * @author Fickler
  * @date 2024/4/24 14:15
  */
-public abstract class Student {
+public class Student {
     public String name;
     public int age;
     public String dealMessage = "";
